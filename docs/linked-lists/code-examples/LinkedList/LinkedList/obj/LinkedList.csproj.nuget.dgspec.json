@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fayzu\\Desktop\\LevelUpDocs\\Technologies\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\LinkedList.csproj": {}
+    "D:\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\LinkedList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fayzu\\Desktop\\LevelUpDocs\\Technologies\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\LinkedList.csproj": {
+    "D:\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\LinkedList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fayzu\\Desktop\\LevelUpDocs\\Technologies\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\LinkedList.csproj",
+        "projectUniqueName": "D:\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\LinkedList.csproj",
         "projectName": "LinkedList",
-        "projectPath": "C:\\Users\\fayzu\\Desktop\\LevelUpDocs\\Technologies\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\LinkedList.csproj",
+        "projectPath": "D:\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\LinkedList.csproj",
         "packagesPath": "C:\\Users\\fayzu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fayzu\\Desktop\\LevelUpDocs\\Technologies\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\obj\\",
+        "outputPath": "D:\\data-structures-and-algorithms\\docs\\linked-lists\\code-examples\\LinkedList\\LinkedList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,8 +45,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -67,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
