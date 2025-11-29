@@ -4,7 +4,7 @@
     /// LinkedList - bu quti
     /// Head - doim birinchi qutiga qaragan bo'ladi
     /// CircularLinkedListNode - bu bir tomonlama aylana quti, ya'ni ohirgi quti aylanib birinchi qutiga qaragan bo'ladi
-    /// Next - hech qachon null bolmaydi
+    /// Next - hech qachon null bolmaydi 
     /// </summary>
     public class CircularLinkedListNode
     {

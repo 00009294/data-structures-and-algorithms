@@ -1,1 +1,22 @@
-.vs/ 
+# Build results
+.vs/
+obj/
+bin/
+
+# Visual Studio
+*.user
+*.suo
+
+# NuGet
+.nuget/
+*.nupkg
+project.assets.json
+project.nuget.cache
+
+# Auto-generated files
+*.cache
+*AssemblyInfo.cs
+*.dll
+*.exe
+*.pdb
+*.deps*
