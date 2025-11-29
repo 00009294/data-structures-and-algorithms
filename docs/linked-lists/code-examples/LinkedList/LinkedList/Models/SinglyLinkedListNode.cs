@@ -55,6 +55,20 @@
         }
 
         /// <summary>
+        /// Boshidan olib tashlash
+        /// </summary>
+        public void RemoveFront()
+        {
+            if (!IsValid(Head))
+                return;
+
+            Head = Head.Next;
+            CurrentSize--;
+            
+            return;
+        }
+
+        /// <summary>
         /// Bog'langan qutilarni ohiriga qoshish
         /// </summary>
         /// <param name="newNode"> yangi quti </param>
@@ -78,6 +92,31 @@
 
             curr.Next = newNode;
             CurrentSize++;
+
+            return;
+        }
+
+        /// <summary>
+        /// Ohiridan olib tashlash
+        /// </summary>
+        public void RemoveBack()
+        {
+            if (!IsValid(Head))
+                return;
+
+            LinkedList curr = Head;
+            LinkedList prev = null;
+
+            while(curr.Next != null)
+            {
+                prev = curr;
+                curr = curr.Next;
+            }
+
+            prev.Next = null;
+            CurrentSize--;
+
+            return;
         }
 
         /// <summary>
@@ -116,6 +155,45 @@
             curr.Next = newNode;
             newNode.Next = next;
             CurrentSize++;
+
+            return;
+        }
+
+        /// <summary>
+        /// Tartib raqam boyicha bog'langan qutilardan bittasini olib tashlash
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="index"></param>
+        public void RemoveMiddle(LinkedList node, int index)
+        {
+            if (!IsValid(node) || index < 0 || index > CurrentSize)
+                return;
+
+            LinkedList prev = null;
+            LinkedList curr = Head;
+            int i = 0;
+            
+            if(i == index)
+            {
+                RemoveFront();
+            }
+
+            while(i < index)
+            {
+                prev = curr;
+                curr = curr.Next;
+                i++;
+            }
+
+            if(!IsValid(curr) || curr.Next == null)
+            {
+                RemoveBack();
+            }
+
+            prev.Next = curr.Next;
+            CurrentSize--;
+
+            return;
         }
 
         /// <summary>
