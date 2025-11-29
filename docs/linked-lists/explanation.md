@@ -19,7 +19,9 @@
 -
 -
 -
--
+## Cost Comparison
+
+![Cost Comparison](../images/cost-comparison-01.png)
 
 
 
