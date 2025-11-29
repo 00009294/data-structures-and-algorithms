@@ -15,7 +15,7 @@
         {
             public int Value { get; set; }
             public LinkedList? Next { get; set; }
-           
+
             public LinkedList(int value = 0, LinkedList? next = null)
             {
                 Value = value;
@@ -27,7 +27,7 @@
         /// Qutilarni bo'shi
         /// </summary>
         private LinkedList? Head { get; set; }
-        
+
         /// <summary>
         /// Qutilarni jami soni
         /// </summary>
@@ -64,7 +64,7 @@
 
             Head = Head.Next;
             CurrentSize--;
-            
+
             return;
         }
 
@@ -74,7 +74,7 @@
         /// <param name="newNode"> yangi quti </param>
         public void AddBack(LinkedList newNode)
         {
-            if(!IsValid(newNode))
+            if (!IsValid(newNode))
                 return;
 
             if (!IsValid(Head))
@@ -107,7 +107,7 @@
             LinkedList curr = Head;
             LinkedList prev = null;
 
-            while(curr.Next != null)
+            while (curr.Next != null)
             {
                 prev = curr;
                 curr = curr.Next;
@@ -126,15 +126,15 @@
         /// <param name="index"> tartib raqam </param>
         public void AddMiddle(LinkedList newNode, int index)
         {
-            if(!IsValid(newNode) || index > CurrentSize) 
+            if (!IsValid(newNode) || index > CurrentSize)
                 return;
 
-            if(index == 0 || Head is null)
+            if (index == 0 || Head is null)
             {
                 AddFront(newNode);
                 return;
             }
-            else if(index == CurrentSize-1)
+            else if (index == CurrentSize - 1)
             {
                 AddBack(newNode);
                 return;
@@ -172,20 +172,20 @@
             LinkedList prev = null;
             LinkedList curr = Head;
             int i = 0;
-            
-            if(i == index)
+
+            if (i == index)
             {
                 RemoveFront();
             }
 
-            while(i < index)
+            while (i < index)
             {
                 prev = curr;
                 curr = curr.Next;
                 i++;
             }
 
-            if(!IsValid(curr) || curr.Next == null)
+            if (!IsValid(curr) || curr.Next == null)
             {
                 RemoveBack();
             }
@@ -194,6 +194,28 @@
             CurrentSize--;
 
             return;
+        }
+
+        /// <summary>
+        /// int[] toplamni Linked List ga ogirib beradi
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns> quti </returns>
+        public static LinkedList ConvertArrayToLinkedList(int[] array)
+        {
+            if (array.Length == 0)
+                return new LinkedList();
+
+            LinkedList head = new LinkedList(array[0]);
+            LinkedList curr = head;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                curr.Next = new LinkedList(array[i]);
+                curr = curr.Next;
+            }
+
+            return head;
         }
 
         /// <summary>
