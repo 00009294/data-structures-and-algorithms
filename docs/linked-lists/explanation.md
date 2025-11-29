@@ -19,7 +19,7 @@
 -
 -
 -
-## Cost Comparison
+## Time Compexity
 
 ![Cost Comparison](../images/cost-comparison-01.png)
 
