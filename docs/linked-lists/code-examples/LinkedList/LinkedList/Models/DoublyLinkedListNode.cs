@@ -1,4 +1,6 @@
-﻿namespace LinkedList.Models
+﻿using System.ComponentModel;
+
+namespace LinkedList.Models
 {
     /// <summary>
     /// LinkedList - bu quti
@@ -7,16 +9,48 @@
     /// Tartib boyicha birinchi qutining Previous qiymati null bo'ladi sababi, ushbu qutiga hech qanday quti qaramagan bo'ladi
     /// Tartib boyicha ohirgi qutining Next qiymati null bo'ladi sababi, ushbu qutidan keyingi quti yoq
     /// </summary>
-    public class DoublyLinkedListNode
+    public class DoublyLinkedList
     {
-        public int Value { get; set; }
-        public DoublyLinkedListNode? Previous { get; set; }
-        public DoublyLinkedListNode? Next { get; set; }
-        public DoublyLinkedListNode(int value = 0, DoublyLinkedListNode? previous = null, DoublyLinkedListNode? next = null)
+        public class DoublyLinkedListNode
         {
-            Value = value;
-            Previous = previous;
-            Next = next;
+            public int Value { get; set; }
+            public DoublyLinkedListNode? Previous { get; set; }
+            public DoublyLinkedListNode? Next { get; set; }
+            public DoublyLinkedListNode(int value = 0, DoublyLinkedListNode? previous = null, DoublyLinkedListNode? next = null)
+            {
+                Value = value;
+                Previous = previous;
+                Next = next;
+            }
+        }
+
+        public DoublyLinkedListNode? Head { get; set; }
+        public int CurrentSize { get; set; }
+
+        public DoublyLinkedList()
+        {
+            Head = null;
+            CurrentSize = 0;
+        }
+
+        public void AddFront(DoublyLinkedListNode? node)
+        {
+            if (!IsValid(node))
+                return;
+
+            node.Next = Head;
+            Head = node;
+            CurrentSize++;
+
+            return;
+        }
+
+        public static bool IsValid(DoublyLinkedListNode? node)
+        {
+            if (node is null || node.Value < 0)
+                return false;
+
+            return true;
         }
     }
 }

@@ -6,17 +6,17 @@
     /// SinglyLinkedList - bu bir tomonlama quti, ya'ni faqat ozidan keyingi quti bilan aloqasi bor(reference orqali)
     /// Ohirgi qutini keyingi quti bilan aloqasi bo'lmaydi, sababi keyingi qutini ozi yoq, shuning uchun keyingi quti null bo'ladi
     /// </summary>
-    public class SinglyLinkedListNode
+    public class SinglyLinkedList
     {
         /// <summary>
         /// LinkedList ni data strukturasi
         /// </summary>
-        public class LinkedList
+        public class SinglyLinkedListNode
         {
             public int Value { get; set; }
-            public LinkedList? Next { get; set; }
+            public SinglyLinkedListNode? Next { get; set; }
 
-            public LinkedList(int value = 0, LinkedList? next = null)
+            public SinglyLinkedListNode(int value = 0, SinglyLinkedListNode? next = null)
             {
                 Value = value;
                 Next = next;
@@ -26,14 +26,14 @@
         /// <summary>
         /// Qutilarni bo'shi
         /// </summary>
-        private LinkedList? Head { get; set; }
+        private SinglyLinkedListNode? Head { get; set; }
 
         /// <summary>
         /// Qutilarni jami soni
         /// </summary>
         private int CurrentSize { get; set; }
 
-        public SinglyLinkedListNode()
+        public SinglyLinkedList()
         {
             Head = null;
             CurrentSize = 0;
@@ -43,7 +43,7 @@
         /// Bog'langan qutilarni boshiga qoshish
         /// </summary>
         /// <param name="newNode"> yangi quti </param>
-        public void AddFront(LinkedList newNode)
+        public void AddFront(SinglyLinkedListNode newNode)
         {
             if (!IsValid(newNode))
                 return;
@@ -72,7 +72,7 @@
         /// Bog'langan qutilarni ohiriga qoshish
         /// </summary>
         /// <param name="newNode"> yangi quti </param>
-        public void AddBack(LinkedList newNode)
+        public void AddBack(SinglyLinkedListNode newNode)
         {
             if (!IsValid(newNode))
                 return;
@@ -83,7 +83,7 @@
                 CurrentSize++;
             }
 
-            LinkedList curr = Head!;
+            SinglyLinkedListNode curr = Head!;
             do
             {
                 curr = curr.Next!;
@@ -104,8 +104,8 @@
             if (!IsValid(Head))
                 return;
 
-            LinkedList curr = Head;
-            LinkedList prev = null;
+            SinglyLinkedListNode curr = Head;
+            SinglyLinkedListNode prev = null;
 
             while (curr.Next != null)
             {
@@ -124,7 +124,7 @@
         /// </summary>
         /// <param name="newNode"> yangi quti </param>
         /// <param name="index"> tartib raqam </param>
-        public void AddMiddle(LinkedList newNode, int index)
+        public void AddMiddle(SinglyLinkedListNode newNode, int index)
         {
             if (!IsValid(newNode) || index > CurrentSize)
                 return;
@@ -140,7 +140,7 @@
                 return;
             }
 
-            LinkedList curr = Head;
+            SinglyLinkedListNode curr = Head;
             int i = 0;
             while (index - 1 != i && curr != null)
             {
@@ -151,7 +151,7 @@
             if (!IsValid(curr))
                 return;
 
-            LinkedList next = curr.Next!;
+            SinglyLinkedListNode next = curr.Next!;
             curr.Next = newNode;
             newNode.Next = next;
             CurrentSize++;
@@ -164,13 +164,13 @@
         /// </summary>
         /// <param name="node"></param>
         /// <param name="index"></param>
-        public void RemoveMiddle(LinkedList node, int index)
+        public void RemoveMiddle(SinglyLinkedListNode node, int index)
         {
             if (!IsValid(node) || index < 0 || index > CurrentSize)
                 return;
 
-            LinkedList prev = null;
-            LinkedList curr = Head;
+            SinglyLinkedListNode prev = null;
+            SinglyLinkedListNode curr = Head;
             int i = 0;
 
             if (i == index)
@@ -201,17 +201,17 @@
         /// </summary>
         /// <param name="array"></param>
         /// <returns> quti </returns>
-        public static LinkedList ConvertArrayToLinkedList(int[] array)
+        public static SinglyLinkedListNode ConvertArrayToLinkedList(int[] array)
         {
             if (array.Length == 0)
-                return new LinkedList();
+                return new SinglyLinkedListNode();
 
-            LinkedList head = new LinkedList(array[0]);
-            LinkedList curr = head;
+            SinglyLinkedListNode head = new SinglyLinkedListNode(array[0]);
+            SinglyLinkedListNode curr = head;
 
             for (int i = 1; i < array.Length; i++)
             {
-                curr.Next = new LinkedList(array[i]);
+                curr.Next = new SinglyLinkedListNode(array[i]);
                 curr = curr.Next;
             }
 
@@ -222,7 +222,7 @@
         /// TEKSHIRUV: Quti bosh yoki Value 0 dan kichik bo'lish mumkin emas
         /// </summary>
         /// <param name="node"> oddiy quti </param>
-        public static bool IsValid(LinkedList? node)
+        public static bool IsValid(SinglyLinkedListNode? node)
         {
             if (node is null || node.Value < 0)
                 return false;
