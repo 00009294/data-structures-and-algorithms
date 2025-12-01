@@ -1,4 +1,4 @@
-># Array && Linked List
+># Array && Linked List && Doubly Linked List
 
 
 ## Array
@@ -16,7 +16,7 @@
 
 - Const of accessing O(n), it traverses consequently from head to tail
 - Dynamic size
-- Stores 2X spaces compared to array(value and pointer)(take 4 bytes per value)
+- Stores 2X spaces compared to array(value and pointer)(take 4 bytes per item)
   
 ![Binary Tree](../images/linked-list-01.png)
 -
@@ -30,8 +30,10 @@
 -
 -
 -
+## Doubly Linked List
+- Stores 3x spaces compared to array per item(prevPointer, value, nextPointer)(take 4 bytes per item)
 
-
+![Doubly Linked List](../images/doubly-linked-list-01.png)
 
 
 
