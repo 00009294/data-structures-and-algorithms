@@ -34,6 +34,9 @@
 - Stores 3x spaces compared to array per item(prevPointer, value, nextPointer)(take 4 bytes per item)
 
 ![Doubly Linked List](../images/doubly-linked-list-01.png)
+-
+- ### Time Complexity
+![Time Complexity](../images/doubly-linked-list-02.png)
 
 
 
