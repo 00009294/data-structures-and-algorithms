@@ -1,4 +1,4 @@
-# Array && Linked List && Doubly Linked List
+# Array vs Linked Lists
 
 
 ## Array
@@ -8,7 +8,7 @@
   
 ![Array](../images/array-01.png)
 -
-## Linked List
+## Singly Linked List
 > Head pointer - stores address of first node
 
 - Const of accessing O(n), it traverses consequently from head to tail
@@ -40,7 +40,6 @@
  ## Circular Doubly Linked List
 
 ![Time Complexity](../images/circular-doubly-linked-list-01.png)
--
 -
 
 
