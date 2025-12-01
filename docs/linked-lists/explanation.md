@@ -1,4 +1,4 @@
-># Array && Linked List && Doubly Linked List
+# Array vs Linked Lists
 
 
 ## Array
@@ -8,10 +8,7 @@
   
 ![Array](../images/array-01.png)
 -
--
--
--
-## Linked List
+## Singly Linked List
 > Head pointer - stores address of first node
 
 - Const of accessing O(n), it traverses consequently from head to tail
@@ -20,24 +17,29 @@
   
 ![Binary Tree](../images/linked-list-01.png)
 -
--
--
--
 ## Time Compexity
 
 ![Cost Comparison](../images/cost-comparison-01.png)
--
--
--
 -
 ## Doubly Linked List
 - Stores 3x spaces compared to array per item(prevPointer, value, nextPointer)(take 4 bytes per item)
 
 ![Doubly Linked List](../images/doubly-linked-list-01.png)
 -
+
 - ### Time Complexity
+  
 ![Time Complexity](../images/doubly-linked-list-02.png)
+-
+
+ ## Circular Linked List
+
+![Time Complexity](../images/circular-linked-list-01.png)
 
 
+ ## Circular Doubly Linked List
+
+![Time Complexity](../images/circular-doubly-linked-list-01.png)
+-
 
 
