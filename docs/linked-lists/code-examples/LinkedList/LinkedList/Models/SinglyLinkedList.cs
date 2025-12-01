@@ -222,7 +222,7 @@
         /// TEKSHIRUV: Quti bosh yoki Value 0 dan kichik bo'lish mumkin emas
         /// </summary>
         /// <param name="node"> oddiy quti </param>
-        public static bool IsValid(SinglyLinkedListNode? node)
+        private static bool IsValid(SinglyLinkedListNode? node)
         {
             if (node is null || node.Value < 0)
                 return false;
