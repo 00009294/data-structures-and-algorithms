@@ -7,16 +7,28 @@
     /// va ohirgi quti birinchi qutiga qaragan bo'ladi
     /// Previous va Next qiymati hech qachon null bolmaydi
     /// </summary>
-    public class DoublyCircularLinkedListNode
+    public class DoublyCircularLinkedList
     {
-        public int Value { get; set; }
-        public DoublyCircularLinkedListNode Previous { get; set; }
-        public DoublyCircularLinkedListNode Next { get; set; }
-        public DoublyCircularLinkedListNode(DoublyCircularLinkedListNode previous, DoublyCircularLinkedListNode next, int value = 0)
+        public class DoublyCircularLinkedListNode
         {
-            Value = value;
-            Previous = previous;
-            Next = next;
+            public int Value { get; set; }
+            public DoublyCircularLinkedListNode? Previous { get; set; }
+            public DoublyCircularLinkedListNode? Next { get; set; }
+            public DoublyCircularLinkedListNode(DoublyCircularLinkedListNode? previous = null, DoublyCircularLinkedListNode? next = null, int value = 0)
+            {
+                Value = value;
+                Previous = previous;
+                Next = next;
+            }
+        }
+
+        public DoublyCircularLinkedListNode? Head { get; set; }
+        public int CurrentSize { get; set; }
+
+        public DoublyCircularLinkedList()
+        {
+            Head = null;
+            CurrentSize = 0;
         }
     }
 }

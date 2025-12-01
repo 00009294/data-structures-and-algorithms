@@ -23,11 +23,13 @@
         }
 
         public DoublyLinkedListNode? Head { get; set; }
+        public DoublyLinkedListNode? Tail { get; set; }
         public int CurrentSize { get; set; }
 
         public DoublyLinkedList()
         {
             Head = null;
+            Tail = null;
             CurrentSize = 0;
         }
 
@@ -98,6 +100,7 @@
             curr.Next = node;
             node.Previous = curr;
 
+            Tail = node;
             CurrentSize++;
 
             return;
@@ -122,6 +125,7 @@
             prev.Next = null;
 
             curr.Previous = null;
+            Tail = prev;
             CurrentSize--;
 
             return;
