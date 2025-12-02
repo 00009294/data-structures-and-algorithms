@@ -28,4 +28,13 @@
 >## *Degenerate Binary Tree* - all nodes have only one child
 ![Binary Tree](../images/binary-tree-07.jpg)
 -
+# Array representation of binary tree
+>> if a node is i-th index:
+>>- left child would be at [(2*i) + 1]
+>>- right child would be at [(2*i) + 2]
+>>- parent node would be at [(i-1)/2]
+>>
+![Binary Tree](../images/array-02.png)
+-
+>- PS. *Make binary tree complete* to calculate properly
 
